@@ -9,6 +9,15 @@ Managing repeating Kubernetes manifest or copying from one to another, editing h
 - Simple Sharing
 - Rollbacks
 
+## Install Helm (within Kubernetes Master/Control Node)
+```
+export VERIFY_CHECKSUM=false
+
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+helm version
+```
+
 ## Helm 3 Architeture
 Helm installs charts into Kubernetes, creating a new release for each installation. And to find new charts, you can search Helm chart repositories.
 - `Repository` is the place where charts can be collected and shared.
@@ -34,16 +43,7 @@ helm list
 helm repo list
 ```
 
-## Install Helm (within Kubernetes Master/Control Node)
-```
-export VERIFY_CHECKSUM=false
-
-curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-
-helm version
-```
-
-## Basic commands to create and use Helm Charts locally.
+## Creating Your Own Charts
 ``` 
 helm create webapp 
 ```
