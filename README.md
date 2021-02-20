@@ -49,11 +49,10 @@ helm create webapp
 ```
 
 ## Delete below files
-
-- /templates/tests/test-connection.yaml
-- /templates/serviceaccount.yaml
-- /templates/ingress.yaml
-- /templates/hpa.yaml
+- rm webapp/templates/tests/test-connection.yaml
+- rm webapp/templates/serviceaccount.yaml
+- rm webapp/templates/ingress.yaml
+- rm webapp/templates/hpa.yaml
 
 
 ## Edit/Add 
@@ -66,8 +65,8 @@ helm create webapp
 
 ## Folder Structure
 ```
-root@node1:~/webapp# tree
-.
+root@node1:~# tree webapp
+webapp
 |-- Chart.yaml
 |-- README.md
 |-- prod-values.yaml
@@ -77,6 +76,8 @@ root@node1:~/webapp# tree
 |   |-- deployment.yaml
 |   `-- service.yaml
 `-- values.yaml
+
+1 directory, 8 files
 ```
 
 ## Dry-run (get the final output that would be sent to Kubernetes API Server)
